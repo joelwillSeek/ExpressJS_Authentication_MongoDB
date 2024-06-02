@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (user) { %>
+
+      <h1>Welcome Back <%= user.name %></h1>
+      <a href="/log-out">LOG OUT</a>
+    <% } else { %>
+  
+      <form action="/log-in" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Log In">
+    </form>
+
+    <% } %>
+
+    
+  </body>
+</html>
